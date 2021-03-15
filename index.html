@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Roberto Policastro - knope</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="master.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,700,700i,800,800i,900,900i" rel="stylesheet"><link rel="stylesheet" href="master.css">
+    <link rel="icon" href="favicon.png" type="image/x-png"/>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="overlay">
+            <p class="screen">KNOPE</p>
+            <div class="intro">
+                    <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+            </div>
+        </div>
+
+        <div class="overlay-2"></div>
+
+
+    </div>
+
+    <script>
+
+     function fadeOut() {
+
+     TweenMax.to(".myBtn", 1, {
+          y: -100,
+          opacity: 0
+     });
+
+     TweenMax.to(".screen", 2, {
+          y: -400,
+          opacity: 0,
+          ease: Power2.easeInOut,
+          delay: 2
+     });
+
+     TweenMax.from(".overlay", 2, {
+          ease: Power2.easeInOut
+     });
+
+     TweenMax.to(".overlay", 2, {
+          delay: 2.6,
+          top: "-110%",
+          ease: Expo.easeInOut
+     });
+
+     TweenMax.to(".overlay-2", 2, {
+          delay: 3,
+          top: "-110%",
+          ease: Expo.easeInOut
+     });
+
+     TweenMax.from(".content", 2, {
+          delay: 3.2,
+          opacity: 0,
+          ease: Power2.easeInOut
+     });
+
+     TweenMax.to(".content", 2, {
+          opacity: 1,
+          y: -300,
+          delay: 3.2,
+          ease: Power2.easeInOut
+     });
+
+     }
+
+    </script>
+    <img id="userPhoto" src="https://i.guim.co.uk/img/media/cd59a408307ade77175cbef95d736687c971baf6/0_1869_5792_3473/master/5792.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=f242cb62772158ca0f7eb4f626faff8d" alt="User Photo">
+    
+    <a href="https://www.instagram.com/knope__" id="userName">@knope</a>
+    <head>
+        <a id="userName">Roberto Policastro</a>
+      </head>
+   
+    <div id="links">
+        <a class="link" href="https://www.facebook.com/roberto.nope6/" target="_blank">Facebook</a>
+        <a class="link" href="https://www.instagram.com/knope__/" target="_blank">Instagram</a>
+        <a class="link" href="https://twitter.com/knopeCS" target="_blank">Twitter</a>
+        <a class="link" href="https://www.depop.com/robertopolicastro/" target="_blank">Depop</a>
+        <a class="link" href="https://www.vinted.it/member/52910325-robertopolicastro" target="_blank">Vinted</a>
+        <a class="link" href="" target="_blank">Discord</a>
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script  src="index.js"></script>
+</body>
+</html>
